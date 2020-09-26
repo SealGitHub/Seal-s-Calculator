@@ -1,5 +1,4 @@
-﻿using Seal_s_Calculator.DiscordRpcDemo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,9 +17,6 @@ namespace Seal_s_Calculator
         private string operatorString = "+";
         private decimal ResultDecimal = 0.0m;
         public string no1, constfun;
-
-        private DiscordRpc.EventHandlers handlers;
-        private DiscordRpc.RichPresence presence;
 
         public CalculatorForm()
         {
@@ -270,16 +266,16 @@ namespace Seal_s_Calculator
 
         private void CalculatorForm_Load(object sender, EventArgs e)
         {
-            this.handlers = default(DiscordRpc.EventHandlers);
-            DiscordRpc.Initialize("720378659793272983", ref this.handlers, true, null);
-            this.handlers = default(DiscordRpc.EventHandlers);
-            DiscordRpc.Initialize("720378659793272983", ref this.handlers, true, null);
-            this.presence.details = "Calculating";
-            this.presence.state = "";
-            this.presence.largeImageKey = "seal2";
-            this.presence.smallImageKey = "";
-            this.presence.largeImageText = "";
-            DiscordRpc.UpdatePresence(ref this.presence);
+        }
+
+        private void valuetextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resulttextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void plusMinBtn_Click(object sender, EventArgs e)

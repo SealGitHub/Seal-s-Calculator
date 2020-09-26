@@ -522,7 +522,8 @@
             // 
             // clearBtn
             // 
-            this.clearBtn.BackColor = System.Drawing.Color.Red;
+            this.clearBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.clearBtn.FlatAppearance.BorderSize = 3;
             this.clearBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
@@ -573,7 +574,7 @@
             this.multBtn.Name = "multBtn";
             this.multBtn.Size = new System.Drawing.Size(58, 45);
             this.multBtn.TabIndex = 27;
-            this.multBtn.Text = "*";
+            this.multBtn.Text = "×";
             this.multBtn.UseVisualStyleBackColor = false;
             this.multBtn.Click += new System.EventHandler(this.multBtn_Click);
             // 
@@ -592,7 +593,7 @@
             this.divideBtn.Name = "divideBtn";
             this.divideBtn.Size = new System.Drawing.Size(57, 45);
             this.divideBtn.TabIndex = 28;
-            this.divideBtn.Text = "/";
+            this.divideBtn.Text = "÷";
             this.divideBtn.UseVisualStyleBackColor = false;
             this.divideBtn.Click += new System.EventHandler(this.divideBtn_Click);
             // 
@@ -618,6 +619,7 @@
             // equalBtn
             // 
             this.equalBtn.BackColor = System.Drawing.Color.Black;
+            this.equalBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equalBtn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.equalBtn.FlatAppearance.BorderSize = 0;
             this.equalBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
@@ -665,6 +667,7 @@
             this.resulttextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.resulttextBox.Size = new System.Drawing.Size(279, 20);
             this.resulttextBox.TabIndex = 33;
+            this.resulttextBox.TextChanged += new System.EventHandler(this.resulttextBox_TextChanged);
             // 
             // valuetextBox
             // 
@@ -673,12 +676,15 @@
             this.valuetextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valuetextBox.ForeColor = System.Drawing.Color.Silver;
             this.valuetextBox.Location = new System.Drawing.Point(13, 12);
+            this.valuetextBox.MaximumSize = new System.Drawing.Size(580, 130);
+            this.valuetextBox.MinimumSize = new System.Drawing.Size(290, 65);
             this.valuetextBox.Multiline = true;
             this.valuetextBox.Name = "valuetextBox";
             this.valuetextBox.ReadOnly = true;
             this.valuetextBox.Size = new System.Drawing.Size(290, 65);
             this.valuetextBox.TabIndex = 32;
             this.valuetextBox.Text = "0";
+            this.valuetextBox.TextChanged += new System.EventHandler(this.valuetextBox_TextChanged);
             // 
             // CalculatorForm
             // 
@@ -720,10 +726,9 @@
             this.Controls.Add(this.lnBtn);
             this.Controls.Add(this.valuetextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(331, 492);
             this.MinimumSize = new System.Drawing.Size(331, 492);
             this.Name = "CalculatorForm";
-            this.Text = "Seal\'s Calculator v0.1";
+            this.Text = "Seal\'s Calculator";
             this.Load += new System.EventHandler(this.CalculatorForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
